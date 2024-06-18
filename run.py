@@ -127,3 +127,9 @@ def books_manager(library):
             quit_program()
         else:
             print("Invalid choice, please try again.")
+
+def main():
+    library = Library()
+    books_manager(library)
+    
+main()
