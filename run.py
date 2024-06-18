@@ -1,3 +1,22 @@
+import gspread 
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('books_manager')
+
+library = SHEET.worksheet('library')
+data = library.get_all_values()
+print(data)
+
+
 class Book:
     def __init__(self, name, author, pages, price):
         self.name = name
@@ -131,5 +150,5 @@ def books_manager(library):
 def main():
     library = Library()
     books_manager(library)
-    
+
 main()
