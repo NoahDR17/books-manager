@@ -80,3 +80,11 @@ def view_all_books(library):
     Displays all books currently in the library.
     """
     library.display_books()
+
+def remove_book(library):
+    """
+    Prompts the user to enter a book name to remove and removes it from the library.
+    """
+    book_name = input("Enter the name of the book to remove: ")
+    result = library.remove_book(book_name)
+    print(result)
