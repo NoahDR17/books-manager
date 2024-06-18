@@ -74,3 +74,9 @@ def search_for_book(library):
     book_name = input("Enter the name of the book to search for: ")
     result = library.search_for_book(book_name)
     print(result)
+
+def view_all_books(library):
+    """
+    Displays all books currently in the library.
+    """
+    library.display_books()
