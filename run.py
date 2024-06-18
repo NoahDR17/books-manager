@@ -14,3 +14,10 @@ class Library:
         Initializes the library with an empty list of books.
         """
         self.books = []
+    
+    def add_book(self, book):
+        """
+        Adds a new book to the library.
+        """
+        self.books.append(book)
+
