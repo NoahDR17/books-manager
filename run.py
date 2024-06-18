@@ -10,6 +10,7 @@ SCOPE = [
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('books_manager')
 
 class Book:
     def __init__(self, name, author, pages, price):
@@ -178,3 +179,5 @@ def books_manager(library):
 def main():
     library = Library()
     books_manager(library)
+
+main()
