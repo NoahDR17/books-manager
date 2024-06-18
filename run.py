@@ -21,3 +21,12 @@ class Library:
         """
         self.books.append(book)
 
+    def display_books(self):
+        """
+        Displays all the books currently in the library.
+        """
+        if not self.books:
+            print("The library is empty.")
+        else:
+            for i, book in enumerate(self.books, 1):
+                print(f"{i}. {book}")
