@@ -30,3 +30,14 @@ class Library:
         else:
             for i, book in enumerate(self.books, 1):
                 print(f"{i}. {book}")
+
+    def search_for_book(self, book_name):
+        """
+        Searches for a book by name in the library.
+        If no book matches the name inputted then returns a message informing the user there is no 
+        book by that name in the library.
+        """
+        for book in self.books:
+            if book.name.lower() == book_name.lower():
+                return f"Name: {book.name}, Author: {book.author}, Pages: {book.pages}, Price: ${book.price:.2f}"
+        return "The book is not in the library."
