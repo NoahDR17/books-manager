@@ -41,3 +41,13 @@ class Library:
             if book.name.lower() == book_name.lower():
                 return f"Name: {book.name}, Author: {book.author}, Pages: {book.pages}, Price: ${book.price:.2f}"
         return "The book is not in the library."
+
+    def remove_book(self, book_name):
+        """
+        Removes a book from the library by name.
+        """
+        for book in self.books:
+            if book.name.lower() == book_name.lower():
+                self.books.remove(book)
+                return f"'{book_name}' has been removed from the library."
+        return "The book is not in the library."
