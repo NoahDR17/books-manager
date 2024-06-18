@@ -66,3 +66,11 @@ def create_book_for_library(library):
         print(f"'{name}' has been added to the library.")
     except ValueError:
         print("Invalid input. Please enter the correct data types for pages and price.")
+
+def search_for_book(library):
+    """
+    Prompts the user to enter a book name to search for and displays the search result.
+    """
+    book_name = input("Enter the name of the book to search for: ")
+    result = library.search_for_book(book_name)
+    print(result)
