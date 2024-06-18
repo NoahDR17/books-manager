@@ -95,3 +95,35 @@ def quit_program():
     """
     print("Quitting the program.")
     exit()
+
+def books_manager(library):
+    """
+    Displays a menu and manages user interaction with the library system.
+    """
+    while True:
+        print("\n------< Books Manager >------")
+        print("1. Add a book")
+        print("2. Search for a book")
+        print("3. View all books")
+        print("4. Remove a book")
+        print("5. Quit")
+        print("-----------------------------\n")
+        
+        try:
+            choice = int(input("Enter Choice: "))
+        except ValueError:
+            print("Invalid choice, please enter a number between 1 and 5.")
+            continue
+
+        if choice == 1:
+            create_book_for_library(library)
+        elif choice == 2:
+            search_for_book(library)
+        elif choice == 3:
+            view_all_books(library)
+        elif choice == 4:
+            remove_book(library)
+        elif choice == 5:
+            quit_program()
+        else:
+            print("Invalid choice, please try again.")
