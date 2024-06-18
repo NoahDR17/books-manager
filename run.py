@@ -7,3 +7,10 @@ class Book:
 
     def __str__(self):
         return f"'{self.name}' by {self.author}, {self.pages} pages, ${self.price:.2f}"
+
+class Library:
+    def __init__(self):
+        """
+        Initializes the library with an empty list of books.
+        """
+        self.books = []
