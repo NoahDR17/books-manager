@@ -1,21 +1,15 @@
-import gspread 
+import gspread
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
-    ]
+]
 
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('books_manager')
-
-library = SHEET.worksheet('library')
-data = library.get_all_values()
-print(data)
-
 
 class Book:
     def __init__(self, name, author, pages, price):
@@ -30,15 +24,48 @@ class Book:
 class Library:
     def __init__(self):
         """
-        Initializes the library with an empty list of books.
+        Initializes the library with an empty list of books and loads any books from Google Sheets.
         """
         self.books = []
+        self.sheet = GSPREAD_CLIENT.open('books_manager').sheet1
+        self.load_books_from_google_sheet()
     
+    def update_google_sheet(self):
+        """
+        Updates the Google Sheet with the current list of books.
+        """
+        try:
+            self.sheet.clear()  # Clear the existing content
+            # Add header row
+            self.sheet.append_row(['Title', 'Author', 'Pages', 'Price'])
+            # Add book data
+            for book in self.books:
+                self.sheet.append_row([book.name, book.author, book.pages, book.price])
+        except Exception as e:
+            print(f"An error occurred while updating Google Sheets: {e}")
+
+    def load_books_from_google_sheet(self):
+        """
+        Loads the books from Google Sheets into the library.
+        """
+        try:
+            rows = self.sheet.get_all_records()
+            for row in rows:
+                name = row['Title']
+                author = row['Author']
+                pages = int(row['Pages'])
+                price = float(row['Price'])
+                book = Book(name, author, pages, price)
+                self.books.append(book)
+        except Exception as e:
+            print(f"An error occurred while loading books from Google Sheets: {e}")
+
     def add_book(self, book):
         """
-        Adds a new book to the library.
+        Adds a new book to the library and updates the Google Sheet.
         """
         self.books.append(book)
+        self.update_google_sheet()
 
     def display_books(self):
         """
@@ -63,11 +90,12 @@ class Library:
 
     def remove_book(self, book_name):
         """
-        Removes a book from the library by name.
+        Removes a book from the library by name and updates the Google Sheet.
         """
         for book in self.books:
             if book.name.lower() == book_name.lower():
                 self.books.remove(book)
+                self.update_google_sheet()
                 return f"'{book_name}' has been removed from the library."
         return "The book is not in the library."
 
@@ -150,5 +178,3 @@ def books_manager(library):
 def main():
     library = Library()
     books_manager(library)
-
-main()
