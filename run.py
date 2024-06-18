@@ -51,3 +51,18 @@ class Library:
                 self.books.remove(book)
                 return f"'{book_name}' has been removed from the library."
         return "The book is not in the library."
+
+def create_book_for_library(library):
+    """
+    Prompts the user to enter details for a new book and adds it to the library.
+    """
+    try:
+        name = input("Enter the name of the book: ")
+        author = input("Enter the author of the book: ")
+        pages = int(input("Enter the number of pages in the book: "))
+        price = float(input("Enter the price of the book: "))
+        new_book = Book(name, author, pages, price)
+        library.add_book(new_book)
+        print(f"'{name}' has been added to the library.")
+    except ValueError:
+        print("Invalid input. Please enter the correct data types for pages and price.")
