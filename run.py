@@ -88,3 +88,10 @@ def remove_book(library):
     book_name = input("Enter the name of the book to remove: ")
     result = library.remove_book(book_name)
     print(result)
+
+def quit_program():
+    """
+    Exits the program.
+    """
+    print("Quitting the program.")
+    exit()
