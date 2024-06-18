@@ -1,3 +1,9 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+class Book:
+    def __init__(self, name, author, pages, price):
+        self.name = name
+        self.author = author
+        self.pages = pages
+        self.price = price
+
+    def __str__(self):
+        return f"'{self.name}' by {self.author}, {self.pages} pages, ${self.price:.2f}"
