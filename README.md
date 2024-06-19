@@ -311,6 +311,9 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
     - **Expected Result**:
       - The program should display an error message: `Invalid input. Please enter a name.`
       - The book should not be added to the library.
+         - **Actual Result**:
+     - ![Empty Name Input](./docs/testing/empty-name.png)
+
 
 14. Viewing All Books When Library is Empty
 
@@ -320,6 +323,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
       2. Select option 3. View all books from the main menu.
     - **Expected Result**:
       - The program should display a message: `The library is empty.`
+   - **Actual Result**:
+     - ![View Empty Library](./docs/testing/empty_library.png)
 
 15. Invalid Data Type for Number of Pages (Negative Integer)
 
@@ -330,8 +335,10 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
       3. Enter a negative integer (e.g., -100) for the number of pages.
       4. Enter the book name, author, and price.
     - **Expected Result**:
-      - The program should display an error message: `Invalid input. Please enter a positive number for pages.`
+      - The program should display an error message: `Invalid input. Please enter a number greater than 0.`
       - The book should not be added to the library.
+   - **Actual Result**:
+     - ![Negative Pages Input](./docs/testing/negative_page.png)
 
 16. Invalid Data Type for Price (Negative Float)
 
@@ -342,8 +349,10 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
       3. Enter a negative float value (e.g., -29.99) for the price.
       4. Enter the book name, author, and number of pages.
     - **Expected Result**:
-      - The program should display an error message: `Invalid input. Please enter a positive number for price.`
+      - The program should display an error message: `Invalid input. Please enter a number greater than 0.`
       - The book should not be added to the library.
+   - **Actual Result**:
+     - ![Negative Price Input](./docs/testing/negative_price.png)
 
 17. Removing a Book with Case Sensitivity
 
@@ -356,6 +365,9 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
     - **Expected Result**:
       - The program should remove the book from the library and display a message: `'[Book Name]' has been removed from the library.`
       - The book should be removed from the Google Sheet.
+   - **Actual Result**:
+     - ![Case Sensitivity](./docs/testing/capitalisation_diff.png)
+     - ![Google Sheet](./docs/testing/empty_sheet.png)
 
 18. Viewing All Books After Removal
     - **Description**: Test the scenario where the user views all books after removing all books from the library.
@@ -364,3 +376,5 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
       2. Select option 3. View all books from the main menu.
     - **Expected Result**:
       - The program should display a message: `The library is empty.`
+   - **Actual Result**:
+     - ![Remove Book and View Empty Library](./docs/testing/test18.png)
