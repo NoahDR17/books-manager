@@ -104,16 +104,49 @@ def create_book_for_library(library):
     """
     Prompts the user to enter details for a new book and adds it to the library.
     """
+
     try:
-        name = input("Enter the name of the book: ")
-        author = input("Enter the author of the book: ")
-        pages = int(input("Enter the number of pages in the book: "))
-        price = float(input("Enter the price of the book: "))
+        while True:
+            name = input("Enter the name of the book: ") 
+            if len(name) < 1:
+                print("Invalid input. Please enter a name")
+                continue
+            else: 
+                break
+        while True:
+            author = input("Enter the author of the book: ")
+            if len(author) < 1:
+                print("Invalid input. Please enter an auther")
+                continue
+            else: 
+                break
+        while True: 
+            try: 
+                pages = int(input("Enter the number of pages in the book: "))
+            except ValueError:
+                print("Invalid input. Please enter a whole number")
+                continue
+            if pages < 1:
+                print("Invalid input. Please enter a number greater than 0")
+                continue
+            else: 
+                break        
+        while True: 
+            try: 
+                price = float(input("Enter the price of the book: "))
+            except ValueError:
+                print("Invalid input. Please enter a number")
+                continue
+            if price < 1:
+                print("Invalid input. Please enter a number greater than 0")
+                continue
+            else: 
+                break        
         new_book = Book(name, author, pages, price)
         library.add_book(new_book)
         print(f"'{name}' has been added to the library.")
     except ValueError:
-        print("Invalid input. Please enter the correct data types for pages and price.")
+        print("Invalid input. Please enter the correct values")
 
 def search_for_book(library):
     """
