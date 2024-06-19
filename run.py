@@ -123,12 +123,6 @@ def search_for_book(library):
     result = library.search_for_book(book_name)
     print(result)
 
-def view_all_books(library):
-    """
-    Displays all books currently in the library.
-    """
-    library.display_books()
-
 def remove_book(library):
     """
     Prompts the user to enter a book name to remove and removes it from the library.
@@ -168,7 +162,7 @@ def books_manager(library):
         elif choice == 2:
             search_for_book(library)
         elif choice == 3:
-            view_all_books(library)
+            library.display_books()
         elif choice == 4:
             remove_book(library)
         elif choice == 5:
