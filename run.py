@@ -166,10 +166,18 @@ def remove_book(library):
 
 def quit_program():
     """
-    Exits the program.
+    Exits the program based on user input.
     """
-    print("Quitting the program.")
-    exit()
+    while True:
+        choice = input("Do you want to quit the program? (y/n): ").lower()
+        if choice == 'y':
+            print("Quitting the program.")
+            exit()
+        elif choice == 'n':
+            return
+        else:
+            print("Invalid input. Please enter 'y' or 'n'.")
+
 
 def books_manager(library):
     """
