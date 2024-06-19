@@ -142,6 +142,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
      3. Enter the name of an existing book when prompted.
    - **Expected Result**:
      - The details of the book should be displayed: Name: [Book Name], Author: [Author], Pages: [Pages], Price: $[Price].
+   - **Actual Result**:
+     - ![Search](./docs/testing/searching-for-book.png)
 
 3. Viewing All Books
 
@@ -151,6 +153,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
      2. Select option 3. View all books from the main menu.
    - **Expected Result**:
      - A list of all books currently in the library should be displayed with details: 1. '[Book Name]' by [Author], [Pages] pages, $[Price].
+   - **Actual Result**:
+     - ![Search All](./docs/testing/searchingforallbooks.png)
 
 4. Removing a Book
 
@@ -163,6 +167,10 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
      - The book should be removed from the library.
      - A message should be displayed: '[Book Name]' has been removed from the library.
      - The book should no longer be visible in the Google Sheet books_manager.
+   - **Actual Result**:
+     - ![Remove Book](./docs/testing/remove_book.png)
+     - ![Remove Book](./docs/testing/book_removed.png)
+
 
 5. Invalid Book Removal
 
@@ -174,6 +182,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
    - **Expected Result**:
      - A message should be displayed: `The book is not in the library.`
      - No changes should be made to the library or the Google Sheet.
+   - **Actual Result**:
+     - ![Remove Non-Existent Book](./docs/testing/remove_non_existent_book.png)
 
 6. Invalid Book Search
 
@@ -184,6 +194,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
      3. Enter the name of a non-existent book when prompted.
    - **Expected Result**:
      - A message should be displayed: `The book is not in the library.`
+    - **Actual Result**:
+     - ![Search Non-Existent Book](./docs/testing/non_existent_search.png)
 
 7. Exiting the Program
 
@@ -194,6 +206,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
    - **Expected Result**:
      - The Program should request comfirmation of exit to the user, (y/n) and be (Case Insensitive), it should throw an error if user inputs anything other than (y/Y)/(n/N).
      - The program should exit and the message `Quitting the program.` should be displayed.
+   - **Actual Result**:
+     - ![Exit](./docs/testing/quit_program.png)
 
 8. Invalid Data Type for Pages
 
@@ -208,6 +222,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
    - **Expected Result**:
      - The program should display an error message: `Invalid input. Please enter a whole number.`
      - The book should not be added to the library.
+   - **Actual Result**:
+     - ![Invalid Page Input](./docs/testing/invalid_data_type_for_page.png)
 
 9. Invalid Data Type for Price
 
@@ -222,6 +238,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
    - **Expected Result**:
      - The program should display an error message: `Invalid input. Please enter a number.`
      - The book should not be added to the library.
+   - **Actual Result**:
+     - ![Invalid Price Input](./docs/testing/invalid_price.png)
 
 10. Non-Numeric Input for Pages
 
@@ -236,6 +254,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
     - **Expected Result**:
       - The program should display an error message: `Invalid input. Please enter a whole number.`
       - The book should not be added to the library.
+   - **Actual Result**:
+     - ![Invalid Page Input](./docs/testing/invalid_data_type_for_page.png)
 
 11. Non-Numeric Input for Price
 
@@ -250,6 +270,8 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
     - **Expected Result**:
       - The program should display an error message: `Invalid input. Please enter a number.`
       - The book should not be added to the library.
+   - **Actual Result**:
+     - ![Invalid Price Input](./docs/testing/invalid_price.png)
 
 12. Invalid Menu Choice
 
@@ -262,13 +284,19 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
       - The main menu should be displayed again for valid input.
     - **Actual Result**:
       - When input is a string, test followed the Expected Result.
+      - ![Invalid Menu](./docs/testing/invalid_menu.png)
       - When input is an integer outside of the range of the menu (1-5), throws error `Invalid choice, please try again.`
+      - ![Invalid Error Message](./docs/testing/menu_invalid_choice_error.png)
+
     - **Fix**:
       - There were two Error cases, one threw the `Invalid choice, please enter a number between 1 and 5.` error if a value that wasnt an integer was given, the other threw `Invalid choice, please try again.`, as an else case in my if/elif statements.
     - **Code Before Fix**:
-    - (insert image)
+      - ![Invalid Choice Code](./docs/testing/invalid_choice_code.png)
     - **Code After Fix**:
-    - (inser image)
+      - ![Correct Choice Correct Code](./docs/testing/correct_code.png)
+   - **Result**:
+      - ![Invalid Menu str Input](./docs/testing/invalid_menu.png)
+      - ![Invalid Menu int Input](./docs/testing/menu_number_wrong.png)
 
 13. Adding a Book with Empty Name
 
