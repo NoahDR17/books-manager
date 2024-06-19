@@ -233,7 +233,7 @@ def books_manager(library):
         elif choice == 5:
             quit_program()
         else:
-            print("Invalid choice, please try again.")
+            print("Invalid choice, please enter a number between 1 and 5.")
 
 
 def main():
