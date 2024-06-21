@@ -3,6 +3,8 @@
 **Project Name**: Books Manager
 
 [Live Link](https://books-manager-fe3018dca0f8.herokuapp.com/)
+[Link to Google Sheet](https://docs.google.com/spreadsheets/d/1Df5J3GYvr_W6eTSX4IPEJV5i8eJ19lMWIizdLDeG4p8/edit?usp=sharing)
+![Menu](./docs/features/display.png)
 
 **Description**:
 Books Manager is a Python-based command-line terminal application designed to streamline the management of a digital library through integration with Google Sheets. Users can add, search for, view, and remove books from their library directly from the terminal interface.
@@ -36,26 +38,24 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Purpose](#purpose)
-3. [Intended Audience](#intended-audience)
-4. [Objectives and Benefits](#objectives-and-benefits)
-5. [User Stories](#user-stories)
+2. [User Stories](#user-stories)
    - [Main Menu Navigation](#main-menu-navigation)
    - [Adding Books](#adding-books)
    - [Removing Books](#removing-books)
    - [Searching for Books](#searching-for-books)
    - [Viewing All Books](#viewing-all-books)
-   - [Returning to Main Menu](#returning-to-main-menu)
-6. [Features](#features)
+   - [Quitting the Program](#quitting the program)
+3. [Features](#features)
    - [Adding a Book](#1-adding-a-book)
    - [Searching for a Book](#2-searching-for-a-book)
    - [Viewing All Books](#3-viewing-all-books)
    - [Removing a Book](#4-removing-a-book)
    - [Quitting the Program](#5-quitting-the-program)
-7. [Logic Flow](#logic-flow)
-8. [Database Design](#database-design)
-9. [Technologies](#technologies)
-10. [Testing](#testing)
+4. [Logic Flow](#logic-flow)
+5. [Database Design](#database-design)
+6. [Technologies](#technologies)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
 
 ### User Stories
 
@@ -79,9 +79,9 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 - **Story**: As a User, I would like to be able to view a list of all books in the library so that I can get an overview of the entire collection.
 - **Reason**: This allows users to see the full scope of their library, making it easier to manage and understand the collection.
 
-#### Returning to Main Menu
-- **Story**: As a User, I would like to be able to return to the main menu without having to restart the application so that I can continue using other features.
-- **Reason**: This ensures a seamless user experience, allowing users to navigate between different functionalities without interruption.
+#### Quitting the Program
+- **Story**: As a User, I want to be able to easily quit the program so that I can exit the application when I am done using it.
+- **Reason**: This functionality is essential to provide users with a convenient way to terminate the application, ensuring a smooth and user-friendly experience.
 
 ### Features
 
@@ -169,6 +169,20 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 
 - ![Add](./docs/features/quit-feat.png)
 
+### Future Features
+
+- **Advanced Search Filters**:
+  - Description: Add advanced search options to filter books by genre, publication date, rating, etc.
+  - Value: Improves the search functionality, making it easier for users to find specific books.
+
+- **Book Reviews and Ratings**:
+  - Description: Allow users to add reviews and ratings for books in the library.
+  - Value: Helps users to make informed decisions about which books to read based on community feedback.
+
+- **User Authentication and Profiles**:
+  - Description: Implement user authentication to allow multiple users to have their own book libraries.
+  - Value: This would enable users to manage their personal collection of books independently.
+
 ### Logic Flow
 
 #### Menu 
@@ -233,7 +247,6 @@ Each row in the Google Sheet represents a single book record. The columns store 
 ## CRUD Operations
 
 The following CRUD (Create, Read, Update, Delete) operations are supported by the database:
-
 
 ## Technologies
 ### Python
@@ -507,7 +520,6 @@ The following CRUD (Create, Read, Update, Delete) operations are supported by th
       - The book is not added to the library.
      - ![Empty Name Input](./docs/testing/empty-name.png)
 
-
 14. Viewing All Books When Library is Empty
 
     - **Description**: Test the scenario where the user views all books in the library when the library is empty.
@@ -590,9 +602,10 @@ Python code has been ran through https://pep8ci.herokuapp.com/ validator, and an
   - Users were able to add multiple books with the same name into the library, causing duplication in the database.
 - **Solution**: 
   - Issue left unchanged as it would make sense to allow there to be more than one of the same books in someones collection.
-## Deployment
 
-### Version Control
+### Deployment
+
+#### Version Control
 
 Site created using Visual Studio Code IDE.
 Pushed to a GitHub repository called "books-manager".
@@ -602,7 +615,7 @@ Pushed to a GitHub repository called "books-manager".
   - `git commit -m "commit message"`
   - `git push`
 
-### Deployment to GitHub Pages
+#### Deployment to GitHub Pages
 
 - The steps to Deploy to GitHub pages are as follows:
   - Open the Github repo.
@@ -612,7 +625,7 @@ Pushed to a GitHub repository called "books-manager".
   - Click save.
   - A live link will be Displayed shortly after.
 
-### Heroku Deployment 
+####s Heroku Deployment 
 
 #### Step 1: Create a New App
 1. **Go to the Heroku website.**
