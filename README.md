@@ -684,6 +684,6 @@ Pushed to a GitHub repository called "books-manager".
 * Project will now be cloned locally.
 
 ## Credits
-[W3Schools](https://www.w3schools.com/python/python_classes.asp) - This site was used to revise my knowledge pn python classes.
-[Python.org](https://docs.python.org/3/tutorial/classes.html) - This site was used to learn the rest of what i required to reach my create my project.
-[RealPython.com](https://realpython.com/python-enumerate/) - This site was used to learn about the enumerate() function 
+- [W3Schools](https://www.w3schools.com/python/python_classes.asp) - This site was used to revise my knowledge pn python classes.
+- [Python.org](https://docs.python.org/3/tutorial/classes.html) - This site was used to learn the rest of what i required to reach my create my project.
+- [RealPython.com](https://realpython.com/python-enumerate/) - This site was used to learn about the enumerate() function 
