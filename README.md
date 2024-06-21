@@ -2,8 +2,10 @@
 
 **Project Name**: Books Manager
 
-[Live Link](https://books-manager-fe3018dca0f8.herokuapp.com/)
-[Link to Google Sheet](https://docs.google.com/spreadsheets/d/1Df5J3GYvr_W6eTSX4IPEJV5i8eJ19lMWIizdLDeG4p8/edit?usp=sharing)
+- Run the program here by clicking this [Live Link](https://books-manager-fe3018dca0f8.herokuapp.com/) 
+
+- View the Google sheet here by clicking this [Link to the Google Sheet](https://docs.google.com/spreadsheets/d/1Df5J3GYvr_W6eTSX4IPEJV5i8eJ19lMWIizdLDeG4p8/edit?usp=sharing)
+
 ![Menu](./docs/features/display.png)
 
 **Description**:
