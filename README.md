@@ -177,7 +177,7 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 
 - **Advanced Search Filters**:
   - Description: Add advanced search options to filter books by genre, publication date, rating, etc.
-  - Value: Improves the search functionality, making it easier for users to find specific books.
+  - Value: Improves the search functionality, making it easier for users to find books.
 
 - **Book Reviews and Ratings**:
   - Description: Allow users to add reviews and ratings for books in the library.
@@ -232,12 +232,6 @@ The database for the Books Manager project leverages Google Sheets as the primar
 Each row in the Google Sheet represents a single book record. The columns store specific attributes of the book, providing a structured format for data storage and retrieval.
 
 ## Google Sheet Layout
-
-| Book Name           | Author             | Pages | Price  |
-|---------------------|--------------------|-------|--------|
-| The Great Gatsby    | F. Scott Fitzgerald| 180   | 10.99  |
-| 1984                | George Orwell      | 328   | 8.99   |
-| To Kill a Mockingbird | Harper Lee       | 281   | 7.99   |
 
 ![Google Sheet](./docs/testing/google_sheetB1.png)
 
@@ -608,6 +602,28 @@ Python code has been ran through https://pep8ci.herokuapp.com/ validator, and an
 - **Solution**: 
   - Issue left unchanged as it would make sense to allow there to be more than one of the same books in someones collection.
 
+- **Invalid Menu Choice**:
+    - **Description**: Issue was found when an invalid menu choice (non-numeric or out-of-range) is entered in the main menu.
+    - **Expected Result**:
+      - The program should display an error message: `Invalid choice, please enter a number between 1 and 5.`
+      - The main menu should be displayed again for valid input.
+    - **Actual Result**:
+      - When input is a string, test followed the Expected Result.
+      - ![Invalid Menu](./docs/testing/invalid_menu.png)
+      - When input is an integer outside of the range of the menu (1-5), throws error `Invalid choice, please try again.`
+      - ![Invalid Error Message](./docs/testing/menu_invalid_choice_error.png)
+
+    - **Fix**:
+      - There were two Error cases, one threw the `Invalid choice, please enter a number between 1 and 5.` error if a value that wasnt an integer was given, the other threw `Invalid choice, please try again.`, as an else case in my if/elif statements.
+    - **Code Before Fix**:
+      - ![Invalid Choice Code](./docs/testing/invalid_choice_code.png)
+    - **Code After Fix**:
+      - ![Correct Choice Correct Code](./docs/testing/correct_code.png)
+   - **Result**:
+      - ![Invalid Menu str Input](./docs/testing/invalid_menu.png)
+      - ![Invalid Menu int Input](./docs/testing/menu_number_wrong.png)
+
+
 ### Deployment
 
 #### Version Control
@@ -687,6 +703,6 @@ Pushed to a GitHub repository called "books-manager".
 * Project will now be cloned locally.
 
 ## Credits
-  - [W3Schools](https://www.w3schools.com/python/python_classes.asp) - This site was used to revise my knowledge pn python classes.
-- [Python.org](https://docs.python.org/3/tutorial/classes.html) - This site was used to learn the rest of what i required to reach my create my project.
+  - [W3Schools](https://www.w3schools.com/python/python_classes.asp) - This site was used to revise my knowledge on python classes.
+- [Python.org](https://docs.python.org/3/tutorial/classes.html) - This site was used to learn the rest of what I required to reach my create my project.
 - [RealPython.com](https://realpython.com/python-enumerate/) - This site was used to learn about the enumerate() function 
