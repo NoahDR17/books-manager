@@ -46,7 +46,7 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
    - [Removing Books](#removing-books)
    - [Searching for Books](#searching-for-books)
    - [Viewing All Books](#viewing-all-books)
-   - [Quitting the Program](#quitting the program)
+   - [Quitting the Program](#quitting-the-program)
 3. [Features](#features)
    - [Adding a Book](#1-adding-a-book)
    - [Searching for a Book](#2-searching-for-a-book)
