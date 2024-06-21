@@ -602,6 +602,7 @@ Python code has been ran through https://pep8ci.herokuapp.com/ validator, and an
 - **Issue**: Duplicate Book Entries
 - **Description**:
   - Users were able to add multiple books with the same name into the library, causing duplication in the database.
+  - ![Duplicate](./docs/testing/duplicate.png)
 - **Solution**: 
   - Issue left unchanged as it would make sense to allow there to be more than one of the same books in someones collection.
 
@@ -684,6 +685,6 @@ Pushed to a GitHub repository called "books-manager".
 * Project will now be cloned locally.
 
 ## Credits
-- [W3Schools](https://www.w3schools.com/python/python_classes.asp) - This site was used to revise my knowledge pn python classes.
+  - [W3Schools](https://www.w3schools.com/python/python_classes.asp) - This site was used to revise my knowledge pn python classes.
 - [Python.org](https://docs.python.org/3/tutorial/classes.html) - This site was used to learn the rest of what i required to reach my create my project.
 - [RealPython.com](https://realpython.com/python-enumerate/) - This site was used to learn about the enumerate() function 
