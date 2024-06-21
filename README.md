@@ -34,6 +34,29 @@ Books Manager aims to accomplish the following:
 
 In summary, Books Manager caters to book enthusiasts, librarians, and educators by offering a straightforward, efficient solution for managing digital libraries. By leveraging Google Sheets integration, accessibility, and ease of use, ultimately benefiting users through streamlined book management capabilities.
 
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Purpose](#purpose)
+3. [Intended Audience](#intended-audience)
+4. [Objectives and Benefits](#objectives-and-benefits)
+5. [User Stories](#user-stories)
+   - [Main Menu Navigation](#main-menu-navigation)
+   - [Adding Books](#adding-books)
+   - [Removing Books](#removing-books)
+   - [Searching for Books](#searching-for-books)
+   - [Viewing All Books](#viewing-all-books)
+   - [Returning to Main Menu](#returning-to-main-menu)
+6. [Features](#features)
+   - [Adding a Book](#1-adding-a-book)
+   - [Searching for a Book](#2-searching-for-a-book)
+   - [Viewing All Books](#3-viewing-all-books)
+   - [Removing a Book](#4-removing-a-book)
+   - [Quitting the Program](#5-quitting-the-program)
+7. [Logic Flow](#logic-flow)
+8. [Database Design](#database-design)
+9. [Technologies](#technologies)
+10. [Testing](#testing)
+
 ### User Stories
 
 #### Main Menu Navigation
