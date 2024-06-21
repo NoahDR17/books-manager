@@ -57,6 +57,8 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 5. [Database Design](#database-design)
 6. [Technologies](#technologies)
 7. [Testing](#testing)
+   - [Pep8 Validation](#pep8-validation)
+   - [Bugs and Fixes](#bugs-and-fixes)
 8. [Deployment](#deployment)
 
 ### User Stories

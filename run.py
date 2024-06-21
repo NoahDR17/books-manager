@@ -14,13 +14,39 @@ SHEET = GSPREAD_CLIENT.open('books_manager')
 
 
 class Book:
+    """
+    Represents a book with attributes such as name, author, pages, and price.
+
+    Attributes:
+        name (str): The title of the book.
+        author (str): The author of the book.
+        pages (int): The number of pages in the book.
+        price (float): The price of the book.
+    """
+
     def __init__(self, name, author, pages, price):
+        """
+        Initializes a new instance of the Book class.
+
+        Args:
+            name (str): The title of the book.
+            author (str): The author of the book.
+            pages (int): The number of pages in the book.
+            price (float): The price of the book.
+        """
         self.name = name
         self.author = author
         self.pages = pages
         self.price = price
 
     def __str__(self):
+        """
+        Returns a string representation of the Book object.
+
+        Returns:
+            str: A formatted string containing the book's title, author,
+                 number of pages, and price.
+        """
         return (
             f"'{self.name}' by {self.author}, "
             f"{self.pages} pages, ${self.price:.2f}"
@@ -28,6 +54,16 @@ class Book:
 
 
 class Library:
+    """
+    Represents a library containing a collection of books managed through
+    Google Sheets.
+
+    Attributes:
+        books (list): A list of Book objects representing the
+        library's collection.
+        sheet (gspread.Spreadsheet): The Google Sheets spreadsheet
+        used to store book data.
+    """
     def __init__(self):
         """
         Initializes the library with an empty list of books
@@ -237,7 +273,9 @@ def books_manager(library):
 
 
 def main():
-
+    """
+    Calls all main functions
+    """
     library = Library()
     books_manager(library)
 
