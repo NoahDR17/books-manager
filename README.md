@@ -139,9 +139,75 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 
 Certainly! Here's the complete block of text formatted in Markdown (.md) file format:
 
-### Manual Testing
+### Logic Flow
 
-#### Test Cases
+#### Menu 
+[Menu](./docs/Flow%20chart/flowchart.png)
+
+#### Add Book
+[Add](./docs/Flow%20chart/add-flow.png)
+#### Search For Book 
+[Search](./docs/Flow%20chart/search-flow.png)
+
+#### View All Books
+[View](./docs/Flow%20chart/view-all-flow.png)
+
+#### Remove A Book
+[Remove](./docs/Flow%20chart/remove-flow.png)
+
+#### Quit
+[Add](./docs/Flow%20chart/add-flow.png)
+
+## Technologies
+### Python
+**Description**: Python is the primary programming language used for the development of the Books Manager project.
+
+**Usage in Project**:
+- Core logic for adding, searching, viewing, and removing books.
+- Handling user input and interaction.
+- Integration with Google Sheets for data storage.
+
+### Google Sheets API
+**Description**: Google Sheets API allows the application to interact with Google Sheets, enabling it to read and write data.
+
+**Usage in Project**:
+- Storing book details such as name, author, pages, and price.
+- Facilitating data retrieval and manipulation operations.
+
+### Heroku
+**Description**: Heroku is a cloud platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+**Usage in Project**:
+- Deploying and hosting the Books Manager application.
+- Managing environment variables and buildpacks.
+
+### GitHub
+**Description**: GitHub is a web-based platform used for version control.
+
+**Usage in Project**:
+- Source code repository for the Books Manager project.
+- Integration with Heroku for continuous deployment.
+
+### Python Libraries
+
+**gspread**:
+**Description**: A Python API for Google Sheets.
+**Usage in Project**: Facilitates interaction with Google Sheets, including reading, writing, and updating records.
+
+**oauth2client**:
+**Description**: A client library for OAuth 2.0.
+**Usage in Project**: Handles authentication and authorization for accessing Google APIs.
+
+### Command Line Interface (CLI)
+**Description**: The CLI is used to interact with the Books Manager application. It is simple and intuitive, allowing users to input commands to manage their library.
+
+**Usage in Project**:
+- Running the application.
+- Navigating through different options like adding, searching, viewing, and removing books.
+
+### Testing
+
+#### Test Cases / Manual Testing 
 
 1. Adding a Book
 
@@ -444,11 +510,9 @@ Python code has been ran through https://pep8ci.herokuapp.com/ validator, and an
 ### Bugs and Fixes
 - **Issue**: Duplicate Book Entries
 - **Description**:
-  -Users were able to add multiple books with the same name into the library, causing duplication in the database.
-
-- **Solution**:
-  - To prevent duplicate book entries, a check was added in the add_book method of the Library class. This check ensures that a book with the same name does not already exist in the library before adding a new book.
-  - [Fixed Code](./docs/testing/duplicate_name_fix.png)
+  - Users were able to add multiple books with the same name into the library, causing duplication in the database.
+- **Solution**: 
+  - Issue left unchanged as it would make sense to allow there to be more than one of the same books in someones collection.
 ## Deployment
 
 ### Version Control
