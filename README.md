@@ -592,7 +592,7 @@ The following CRUD (Create, Read, Update, Delete) operations are supported by th
 
 ### Pep8 Validation 
 Python code has been ran through https://pep8ci.herokuapp.com/ validator, and any errors or warnings shown were then fixed. 
-[Python Validated](./docs/testing/python-valid.png)
+- ![Python Validated](./docs/testing/python-valid.png)
 
 ### Bugs and Fixes
 - **Issue**: Duplicate Book Entries
