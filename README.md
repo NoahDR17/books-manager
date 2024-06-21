@@ -79,6 +79,7 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 - **Value to the User**:
   Users benefit from a straightforward process to input and catalog new books into their digital library, ensuring that their collection remains organized and accessible.
 
+- ![Add](./docs/features/add-feat.png)
 #### 2. Searching for a Book
 
 - **Feature Description**:
@@ -94,6 +95,8 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 - **Value to the User**:
   Users can quickly retrieve information about specific books without manually scanning through their entire collection, enhancing efficiency and usability.
 
+- ![Search](./docs/features/search-feat.png)
+
 #### 3. Viewing All Books
 
 - **Feature Description**:
@@ -107,6 +110,8 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 
 - **Value to the User**:
   Provides users with a comprehensive overview of their entire book collection, facilitating easier management and reference.
+
+- ![View](./docs/features/view-feat.png)
 
 #### 4. Removing a Book
 
@@ -123,6 +128,8 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 - **Value to the User**:
   Enables users to maintain an up-to-date library by removing books they no longer wish to keep, ensuring accurate cataloging and management.
 
+- ![Remove](./docs/features/remove-feat.png)
+
 #### 5. Quitting the Program
 
 - **Feature Description**:
@@ -137,7 +144,7 @@ In summary, Books Manager caters to book enthusiasts, librarians, and educators 
 - **Value to the User**:
   Offers a straightforward way to gracefully exit the application once users have completed their tasks, ensuring a user-friendly experience.
 
-Certainly! Here's the complete block of text formatted in Markdown (.md) file format:
+- ![Add](./docs/features/quit-feat.png)
 
 ### Logic Flow
 
@@ -176,10 +183,10 @@ The database for the Books Manager project leverages Google Sheets as the primar
 **Google Sheet Name**: `books_manager`
 
 **Columns**:
-2. **Book Name**: The name of the book.
-3. **Author**: The author of the book.
-4. **Pages**: The number of pages in the book.
-5. **Price**: The price of the book.
+1. **Book Name**: The name of the book.
+2. **Author**: The author of the book.
+3. **Pages**: The number of pages in the book.
+4. **Price**: The price of the book.
 
 Each row in the Google Sheet represents a single book record. The columns store specific attributes of the book, providing a structured format for data storage and retrieval.
 
