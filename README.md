@@ -142,21 +142,68 @@ Certainly! Here's the complete block of text formatted in Markdown (.md) file fo
 ### Logic Flow
 
 #### Menu 
-[Menu](./docs/Flow%20chart/flowchart.png)
+![Menu](./docs/flow_chart/flowchart.png)
 
 #### Add Book
-[Add](./docs/Flow%20chart/add-flow.png)
+![Add](./docs/flow_chart/add-flow.png)
+
 #### Search For Book 
-[Search](./docs/Flow%20chart/search-flow.png)
+![Search](./docs/flow_chart/search-flow.png)
 
 #### View All Books
-[View](./docs/Flow%20chart/view-all-flow.png)
+![View](./docs/flow_chart/view-all-flow.png)
 
 #### Remove A Book
-[Remove](./docs/Flow%20chart/remove-flow.png)
+![Remove](./docs/flow_chart/remove-flow.png)
 
 #### Quit
-[Add](./docs/Flow%20chart/add-flow.png)
+![Quit](./docs/flow_chart/end-flow.png)
+
+# Database Design
+
+The database for the Books Manager project leverages Google Sheets as the primary storage mechanism for all book-related data. This approach is chosen for its simplicity, accessibility, and ease of integration with Python. Below is a detailed overview of the database design, including the structure of the Google Sheet and how the data is organized.
+
+## Why Google Sheets?
+
+### Benefits:
+- **Ease of Use**: Google Sheets provides an intuitive and user-friendly interface that requires minimal setup.
+- **Accessibility**: Data stored in Google Sheets can be accessed from anywhere with an internet connection.
+- **Integration**: Google Sheets API allows seamless integration with Python, enabling easy data manipulation and retrieval.
+- **Collaboration**: Multiple users can access and update the data simultaneously, making it ideal for collaborative projects.
+
+## Database Structure
+
+**Google Sheet Name**: `books_manager`
+
+**Columns**:
+2. **Book Name**: The name of the book.
+3. **Author**: The author of the book.
+4. **Pages**: The number of pages in the book.
+5. **Price**: The price of the book.
+
+Each row in the Google Sheet represents a single book record. The columns store specific attributes of the book, providing a structured format for data storage and retrieval.
+
+## Google Sheet Layout
+
+| Book Name           | Author             | Pages | Price  |
+|---------------------|--------------------|-------|--------|
+| The Great Gatsby    | F. Scott Fitzgerald| 180   | 10.99  |
+| 1984                | George Orwell      | 328   | 8.99   |
+| To Kill a Mockingbird | Harper Lee       | 281   | 7.99   |
+
+![Google Sheet](./docs/testing/google_sheetB1.png)
+
+## Data Types
+
+- **Book Name**: String
+- **Author**: String
+- **Pages**: Integer
+- **Price**: Float
+
+## CRUD Operations
+
+The following CRUD (Create, Read, Update, Delete) operations are supported by the database:
+
 
 ## Technologies
 ### Python
